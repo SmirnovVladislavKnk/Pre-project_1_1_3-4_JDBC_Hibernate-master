@@ -16,7 +16,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (PreparedStatement preparedStatement = Util
                 .getConnection()
                 .prepareStatement("CREATE TABLE IF NOT EXISTS new_table (id BIGINT NOT NULL AUTO_INCREMENT, " +
-                        "name varchar(45) NOT NULL, lastName varchar(45) NOT NULL, age int NOT NULL, " +
+                        "name VARCHAR(45) NOT NULL, lastName VARCHAR(45) NOT NULL, age INT NOT NULL, " +
                         "PRIMARY KEY (id))")) {
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
